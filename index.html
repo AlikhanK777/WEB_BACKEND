@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f4f4f9; }
+        .container { max-width: 400px; margin: 0 auto; padding: 30px; background-color: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+        h1 { color: #007bff; margin-bottom: 25px; }
+        label { display: block; margin: 15px 0 5px; font-weight: bold; text-align: left; }
+        input { padding: 10px; width: 100%; box-sizing: border-box; border: 1px solid #ccc; border-radius: 5px; }
+        button { margin-top: 20px; padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1.1em; transition: background-color 0.3s; }
+        button:hover { background-color: #218838; }
+        
+        .result { margin-top: 25px; padding: 20px; border-radius: 8px; font-size: 1.1em; }
+        .bmi-value { font-size: 2.2em; font-weight: bold; margin: 5px 0; }
+        .normal { background-color: #d4edda; color: #155724; } 
+        .overweight { background-color: #fff3cd; color: #856404; }
+        .underweight { background-color: #bee5eb; color: #0c5460; }
+        .obese { background-color: #f8d7da; color: #721c24; } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator Service</h1>
+        <form action="/calculate-bmi" method="POST">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" name="weight" id="weight" step="0.01" required placeholder="e.g., 70" min="0.1">
+            
+            <label for="height">Height (meters):</label>
+            <input type="number" name="height" id="height" step="0.01" required placeholder="e.g., 1.75" min="0.1">
+            
+            <button type="submit">Calculate BMI</button>
+        </form>
+    </div>
+</body>
+</html>
